@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        git 'https://github.com/mwerner1984/locke.git'
+        echo 'test'
       }
     }
   }
