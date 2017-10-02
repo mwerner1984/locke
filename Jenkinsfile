@@ -1,9 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        echo 'test'
+        parallel(
+          "error": {
+            echo 'test'
+            
+          },
+          "": {
+            git 'https://github.com/mwerner1984/locke.git'
+            
+          }
+        )
       }
     }
   }
