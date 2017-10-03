@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Run Test') {
       steps {
-        bat '.\\test.bat'
+        bat '.\\test_chrome.bat'
       }
     }
   }
