@@ -1,9 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('Run Test') {
+    stage('Selenium Chrome') {
       steps {
-        bat '.\\test_chrome.bat'
+        parallel(
+          "Selenium Chrome": {
+            bat '.\\test_chrome.bat'
+            
+          },
+          "Selenium Internet Explorer": {
+            bat 'test_iexplorer.bat'
+            
+          }
+        )
       }
     }
   }
