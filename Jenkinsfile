@@ -11,6 +11,10 @@ pipeline {
           "Selenium Internet Explorer": {
             bat 'test_iexplorer.bat'
             
+          },
+          "Selenium Firefox": {
+            bat 'test_firefox.bat'
+            
           }
         )
       }
